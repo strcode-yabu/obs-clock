@@ -5,6 +5,7 @@ $(function () {
   
   const yyyymmddhhmiss = function() {
     let date = new Date();
+    let clockString = '';
 
     let yyyy = date.getFullYear();
     let mm = toDoubleDigits(date.getMonth() + 1);
@@ -13,17 +14,22 @@ $(function () {
     let mi = toDoubleDigits(date.getMinutes());
     let ss = toDoubleDigits(date.getSeconds());
 
-    return '<span class="yyyy">' + yyyy + '</span>' +
-    '<span class="date_sep--yyyy">.</span>' +
-    '<span class="mm">' + mm + '</span>' + 
-    '<span class="date_sep--mm">.</span>' +
-    '<span class="dd">' + dd + '</span>' +
-    '<br>' +
-    '<span class="hh">' + hh + '</span>' + 
-    '<span class="time_sep--hh">:</span>' +
-    '<span class="mi">' + mi + '</span>' +
-    '<span class="time_sep--mi">:</span>' +
-    '<span class="ss">' + ss + '</span>';
+    clockString += '<div class="yyyymmdd">';
+    clockString += '<span class="yyyy">' + yyyy + '</span>';
+    clockString += '<span class="date_sep--yyyy">.</span>';
+    clockString += '<span class="mm">' + mm + '</span>';
+    clockString += '<span class="date_sep--mm">.</span>';
+    clockString += '<span class="dd">' + dd + '</span>';
+    clockString += '</div>'
+    clockString += '<div class="hhmiss">';
+    clockString += '<span class="hh">' + hh + '</span>';
+    clockString += '<span class="time_sep--hh">:</span>';
+    clockString += '<span class="mi">' + mi + '</span>';
+    clockString += '<span class="time_sep--mi">:</span>';
+    clockString += '<span class="ss">' + ss + '</span>';
+    clockString += '</div>'
+
+    return clockString;
   };
 
   const toDoubleDigits = function(num) {
