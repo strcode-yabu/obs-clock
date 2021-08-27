@@ -142,3 +142,11 @@ body {
   display: none;
 }
 ```
+
+## 最後に
+
+もし使ってみて気に入った場合。  
+下にあるofuseというサービスからお布施していただけると制作の励みになります。  
+
+<a data-ofuse-widget-button href="https://ofuse.me/o?uid=15817" data-ofuse-id="15817" data-ofuse-style="rectangle">OFUSEする</a>
+<script async src="https://ofuse.me/assets/platform/widget.js" charset="utf-8"></script>
